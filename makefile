@@ -6,7 +6,7 @@
 #    By: rpascoal <rpascoal@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 15:48:02 by rpascoal          #+#    #+#              #
-#    Updated: 2021/02/16 10:26:37 by rpascoal         ###   ########.fr        #
+#    Updated: 2021/02/16 11:25:34 by rpascoal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS	= ft_strlen.c	ft_strlcat.c	ft_strncmp.c	ft_memcmp.c	\
 	ft_itoa.c	ft_strmapi.c	ft_putchar_fd.c	ft_putstr_fd.c	\
 	ft_putendl_fd.c	ft_putnbr_fd.c	ft_lstnew.c	ft_lstadd_front.c\
 	ft_lstsize.c	ft_lstlast.c	ft_lstadd_back.c \
-	ft_lstdelone.c 	
+	ft_lstdelone.c	ft_lstclear.c 	
 OBJS	= $(SRCS:.c=.o)
 CC	= gcc
 FLAGS	= -Wall -Wextra -Werror 

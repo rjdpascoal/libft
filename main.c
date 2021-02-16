@@ -6,7 +6,7 @@
 /*   By: rpascoal <rpascoal@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 12:00:32 by rpascoal          #+#    #+#             */
-/*   Updated: 2021/02/16 10:17:05 by rpascoal         ###   ########.fr       */
+/*   Updated: 2021/02/16 12:09:42 by rpascoal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -280,6 +280,14 @@ void test10()
 		printf("%i ", *((int*)tmp->content));
 		tmp = tmp->next;
 	}
+	printf("\n\nTest  ft_lstclear :\n");
+	ft_lstclear(&begin,ft_del);
+	printf("Should print...nothing.\n");
+	tmp = begin;
+	while (tmp)
+	{
+	printf("%i ", *((int*)tmp->content));
+	tmp = tmp->next;								}
 }
 
 
