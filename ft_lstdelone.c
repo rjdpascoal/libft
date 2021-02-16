@@ -6,7 +6,7 @@
 /*   By: rpascoal <rpascoal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 18:59:41 by rpascoal          #+#    #+#             */
-/*   Updated: 2021/02/15 19:02:15 by rpascoal         ###   ########.fr       */
+/*   Updated: 2021/02/16 10:24:54 by rpascoal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
+	del(lst->content);
+	free(lst);
 }

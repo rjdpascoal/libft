@@ -6,7 +6,7 @@
 /*   By: rpascoal <rpascoal@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 12:00:32 by rpascoal          #+#    #+#             */
-/*   Updated: 2021/02/15 18:11:44 by rpascoal         ###   ########.fr       */
+/*   Updated: 2021/02/16 10:17:05 by rpascoal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include "libft.h"
+
+void	ft_del(void *content)
+{
+		*(int*)content = 0;
+		return ;
+}
 
 static	void	testmemset(void)
 {
@@ -259,6 +265,16 @@ void test10()
 	}
 	tmp = begin;
 	printf("Should print numbers from 9 to -9 :\n");
+	while (tmp)
+	{
+		printf("%i ", *((int*)tmp->content));
+		tmp = tmp->next;
+	}
+	printf("\n\nTest ft_lstdelone :\n");
+	tmp = begin->next;
+	ft_lstdelone(begin, ft_del);
+	begin = tmp;
+	printf("Should print numbers from 8 to -9 :\n");
 	while (tmp)
 	{
 		printf("%i ", *((int*)tmp->content));
